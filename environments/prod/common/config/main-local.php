@@ -3,14 +3,19 @@ return [
     'components' => [
         'db' => [
             'class' => 'yii\db\Connection',
-            'dsn' => 'mysql:host=localhost;dbname=yii2advanced',
-            'username' => 'root',
-            'password' => '',
+            'dsn' => 'mysql:host=localhost;dbname=yii2cms_prod',
+            'username' => 'admin',
+            'password' => 'admin',
             'charset' => 'utf8',
         ],
-        'mailer' => [
-            'class' => 'yii\swiftmailer\Mailer',
-            'viewPath' => '@common/mail',
+    ],
+    'controllerMap' => [
+        'migrate' => [
+            'class' => 'fishvision\migrate\controllers\MigrateController',
+            'autoDiscover' => true,
+            'migrationPaths' => [
+                '@vendor'
+            ],
         ],
     ],
 ];

@@ -17,7 +17,9 @@
         "php": ">=5.4.0",
         "yiisoft/yii2": ">=2.0.6",
         "yiisoft/yii2-bootstrap": "*",
-        "yiisoft/yii2-swiftmailer": "*"
+        "yiisoft/yii2-swiftmailer": "*",
+        "fishvision/yii2-migrate": "*",
+        "infoweb-internet-solutions/yii2-cms": "*"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
@@ -26,12 +28,23 @@
         "yiisoft/yii2-faker": "*"
     },
     "config": {
-        "process-timeout": 1800
+        "process-timeout": 1800,
+        "preferred-install": "source"
     },
     "extra": {
         "asset-installer-paths": {
             "npm-asset-library": "vendor/npm",
             "bower-asset-library": "vendor/bower"
         }
-    }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/infoweb-internet-solutions/yii2-i18n-module"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/infoweb-internet-solutions/yii2-ckeditor"
+        }
+    ]
 }
